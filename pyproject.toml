@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vectorvibe"
+version = "0.1.0"
+description = "Mathematical Music Recommendation System — university Linear Algebra / MFAD project"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0", "openpyxl>=3.1", "flask>=3.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["dataset*", "mathematics*", "recommendation*", "ui*", "visualization*"]
+
+[tool.setuptools.package-data]
+ui = ["templates/*.html", "static/*.css", "static/*.js"]
